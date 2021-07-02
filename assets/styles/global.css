@@ -1,0 +1,88 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    --purple: #774AD7;
+    --white: #FAFAFA;
+    --darkBlue: #120083;
+    --lightPurple: #D3D2FB;
+    --greyDark: #5B5656;
+    --greyMedium: #828282;
+    --greyLight: #BDBDBD;
+    --red: #E83F5B;
+
+    font-size: 62.5%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background: var(--white);
+    padding-left: 8.1rem;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2.2rem ;
+    padding-right: 2.5rem;
+}
+
+.buttons {
+    display: flex;
+    width: 40rem;
+}
+
+
+.button {
+    width: 18.2rem;
+    height: 4.6rem;
+    background: var(--purple);
+    border-radius: 0.8rem;
+    font-size: 1.8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 400;
+}
+
+.buttons .button img {
+    width: 2.4rem;
+    height: 2.4rem;
+}
+
+.buttons a:nth-child(1){
+    background-color: var(--white);
+    border: 0.2rem var(--purple) solid;
+    color: var(--purple);
+    width: 15.6rem;
+    margin-right: 3.4rem;
+}
+
+.buttons a:nth-child(2){
+    border: 0.2rem var(--purple) solid;
+    color: var(--white);
+}
+
+.button:hover {
+    filter: brightness(1.2);
+}
+
+h2 {
+    font-size: 3.6rem;
+    color: var(--darkBlue)
+}
+
+h3 {
+    font-size: 2.4rem;
+    color: var(--greyDark);
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="/styles/createJob.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>FixThat - Cadastrar job</title>
+</head>
+<body>
+    <header>
+        <a href="/">
+            <img src="/images/logo.png" alt="">
+        </a>
+        <div class="buttons">
+            <a class="button" href="/seeJobs">
+                <img src="/images/list.svg" alt="Meus jobs">
+                Meus jobs
+            </a>
+            <a class="button" href="/createJob">
+                <img src="/images/add.svg" alt="Cadastrar job">
+                Cadastrar job
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <div id="background">
+
+        </div>
+
+        <div class="formWrapper">
+            <h2>Cadastrar Job</h2>
+            <form action="/jobs" method="POST">
+                <div class="inputsContainer">
+                    <input type="number" name="loginCode" id="" placeholder="Código de login"/>
+                    <input type="password" name="password" placeholder="Senha" id="" />
+                </div>
+                <input type="text" name="jobTitle" placeholder="Título" id=""/>
+                <textarea name="jobDescription" placeholder="Descrição do job" id=""></textarea>
+                <select name="jobArea" id="">
+                    <option value="default" selected disabled>Área de atuação</option>
+                    <option value="hydraulics">Hidráulica</option>
+                    <option value="electrics">Elétrica</option>
+                    <option value="painting">Pintura</option>
+                    <option value="masonry">Marcenaria</option>
+                </select>
+                <button class="button">Criar conta</button>
+            </form>
+            <span>Ainda não tem um login? <a href="/createAccount">Clique aqui</a></span>
+        </div>
+    </main>
+</body>
+</html>

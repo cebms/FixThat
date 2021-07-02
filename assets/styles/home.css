@@ -1,0 +1,99 @@
+
+main .divider {
+    height: 0.2rem;
+    width: 42rem;
+    background-color: var(--greyLight);
+    margin-bottom: 3.3rem;
+}
+
+main h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+main .cardsContainer {
+    width: 90%;
+}
+
+.cardsContainer {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cardsContainer .jobCard {
+    width: min(54.1rem, 100%);
+    background: var(--lightPurple);
+    border-radius: .8rem;
+    padding-top: .4rem;
+    margin-bottom: 2.2rem;
+}
+
+.jobCard .cardHeader {
+    display: flex;
+}
+
+.jobCard .cardHeader  img{
+    background: var(--purple);
+    padding: .8rem;
+    border-radius: .8rem 0 0 0 ;
+    margin-top: -.4rem;
+    margin-right: 1.8rem;
+
+}
+
+.jobCard .cardHeader h3{
+    font-weight: 500;
+}
+
+.jobCard .cardContent {
+    padding-left: 2.1rem;
+    padding-bottom: 2.1rem;
+}
+
+.jobCard .cardContent .userInfo {
+    display: flex;
+    align-items: center;
+
+    margin-top: 2.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--greyMedium);
+}
+
+.jobCard .cardContent .userInfo img {
+    margin-right: .8rem;
+}
+
+.jobCard .cardContent .jobDescription {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    margin-top: 1.6rem;
+    max-width: 95%;
+    min-height: 6rem;
+}
+
+.jobCard .cardContent .jobDescription strong {
+    font-weight: 500;
+    color: var(--greyDark);
+}
+
+.jobCard .cardContent .jobDescription span {
+    font-weight: 500;
+    color: var(--greyMedium);
+}
+
+.jobCard .cardContent .button{
+    width: fit-content;
+    height: 5.3rem;
+    background: var(--purple);
+    padding: 1rem 1.6rem;
+    border-radius: .8rem;
+    color: var(--white);
+    font-size: 1.4rem;
+    font-weight: 500;
+    padding: 1rem;
+}
+
+.jobCard .cardContent .button img{
+    margin-right: .9rem;
+}

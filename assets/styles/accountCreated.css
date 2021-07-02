@@ -1,0 +1,37 @@
+main {
+    display: flex;
+    height: 100%;
+    margin-top: 3.2rem;
+    margin-left: -8.1rem;
+}
+
+#background {
+    width: 40vw;
+    background: url('../images/background.svg') no-repeat top/contain;
+    background-position: bottom;
+}
+
+.welcomeWrapper p {
+    font-size: 2.4rem;
+    color: var(--greyMedium);
+    font-weight: 400;
+}
+
+.welcomeWrapper .loginCode{
+    width: 13.4rem;
+    height: 5rem;
+    border: solid 2px var(--purple);
+    border-radius: .8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--greyMedium);
+    margin-bottom: 1.4rem;
+    margin-top: 3.2rem;
+}
+
+.welcomeWrapper a {
+    color: var(--white);
+}

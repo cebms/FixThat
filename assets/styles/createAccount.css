@@ -1,0 +1,53 @@
+main {
+    display: flex;
+    height: 100%;
+    margin-top: 3.2rem;
+    margin-left: -8.1rem;
+}
+
+#background {
+    width: 40vw;
+    background: url('../images/background.svg') no-repeat top/contain;
+    background-position: bottom;
+}
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-left: 9.4rem;
+}
+
+.formWrapper h2 {
+    margin-bottom: 1.5rem;
+}
+
+.formWrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formWrapper form input {
+    height: 6.3rem ;
+    width: 43.2rem;
+    border: solid 0.2rem var(--greyLight); 
+    margin-bottom: 1.2rem;
+    border-radius: 1.2rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    outline: none;
+}
+
+.formWrapper form input:focus{
+    border: solid 0.2rem var(--purple)
+}
+
+.formWrapper form input::placeholder{
+    color: var(--greyLight);
+}
+
+.formWrapper form .button {
+    width: 43.2rem;
+    color: var(--white);
+}

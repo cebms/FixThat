@@ -1,0 +1,112 @@
+main {
+    display: flex;
+    height: 100%;
+    margin-top: 3.2rem;
+    margin-left: -8.1rem;
+}
+
+#background {
+    width: 40vw;
+    background: url('../images/background.svg') no-repeat top/contain;
+    background-position: bottom;
+}
+
+.formWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 60vw;
+    margin-left: 9.4rem;
+}
+
+.formWrapper h2 {
+    margin-bottom: 1.5rem;
+}
+
+.formWrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+.formWrapper form input {
+    height: 6.3rem ;
+    width: 43.2rem;
+    border: solid 0.2rem var(--greyLight); 
+    margin-bottom: 1.2rem;
+    border-radius: 1.2rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    outline: none;
+}
+
+.formWrapper form textarea {
+    width: 43.2rem;
+    height: 11rem;
+    border: solid 0.2rem var(--greyLight);
+    border-radius: .8rem;
+    padding-top: .8rem;
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    outline: none;
+    resize: none;
+}
+
+.formWrapper form select {
+    height: 6.3rem ;
+    width: 43.2rem;
+    width: 43.2rem;
+    border: solid 0.2rem var(--greyLight);
+    color: var(--greyDark);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding-left: 2rem;
+    outline: none;
+    margin-bottom: 1.2rem;
+}
+
+
+.formWrapper form input:focus{
+    border: solid 0.2rem var(--purple)
+}
+
+.formWrapper form textarea:focus{
+    border: solid 0.2rem var(--purple)
+}
+
+.formWrapper form select:focus{
+    border: solid 0.2rem var(--purple)
+}
+
+.formWrapper form input::placeholder{
+    color: var(--greyLight);
+}
+
+.formWrapper form textarea::placeholder{
+    color: var(--greyLight);
+}
+
+
+.formWrapper form .button {
+    width: 43.2rem;
+    color: var(--white);
+}
+
+.formWrapper span, a {
+    margin-top: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.formWrapper .inputsContainer {
+    width: 43.2rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.formWrapper form .inputsContainer input:nth-child(1),
+.formWrapper form .inputsContainer input:nth-child(2){
+    width: 20.4rem;
+}
