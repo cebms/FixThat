@@ -7,9 +7,7 @@ const jobsController = new JobsController();
 
 const routes = express.Router();
 
-routes.get('/', (request, response) => {
-    return response.render('home');
-});
+routes.get('/', jobsController.index);
 
 routes.get('/createAccount', (request, response) => {
     return response.render('createAccount');
@@ -25,9 +23,11 @@ routes.get('/accountCreated/:loginCode', (request,response) => {
 });
 
 routes.get('/seeJobs', (request, response) => {
-    return response.render('seeJobs');
+    return response.render('seeJobs', {userJobs: []});
 })
 
+routes.post('/myJobs', usersController.listJobs);
+routes.post('/deleteJob/:user_id/:job_id', jobsController.delete);
 routes.post('/users', usersController.create);
 routes.post('/jobs', jobsController.create);
 

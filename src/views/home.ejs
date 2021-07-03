@@ -34,99 +34,31 @@
 
         <div class="cardsContainer">
 
-            <div class="jobCard">
-                <div class="cardHeader">
-                    <img src="/images/waterDrop.svg" alt="Hidráulica">
-                    <h3>Serviço de encanamento</h3>
+            <% jobs.map(job => { %>
+                <div class="jobCard">
+                    <div class="cardHeader">
+                        <img src="/images/<%= job.area %>.svg "  alt="Hidráulica">
+                        <h3><%= job.title %> </h3>
+                    </div>
+                    <div class=cardContent>
+                        <div class="userInfo">
+                            <img src="/images/user.svg" alt="Nome de usuário">
+                            <%= job.username %> 
+                        </div>
+                        <div class="jobDescription">
+                            <strong>Descrição:</strong>
+                            <span>
+                                <%= job.description %> 
+                            </span>
+                        </div>
+                        
+                        <a class="button" href="https://wa.me/55<%= job.whatsapp %> ">
+                            <img src="/images/whatsappLogo.svg" alt="Entrar em contato">
+                            Entrar em contato
+                        </a>
+                    </div> 
                 </div>
-                <div class=cardContent>
-                    <div class="userInfo">
-                        <img src="/images/user.svg" alt="Nome de usuário">
-                        Márcio felipe
-                    </div>
-                    <div class="jobDescription">
-                        <strong>Descrição:</strong>
-                        <span>Faço serviços de encanamento em casas e apartamentos. Reparo de vazamentos,
-                            infiltrações e afins. Disponível também nos finais de semana.
-                        </span>
-                    </div>
-                    
-                    <a class="button" href="#">
-                        <img src="/images/whatsappLogo.svg" alt="Entrar em contato">
-                        Entrar em contato
-                    </a>
-                </div> 
-            </div>
-
-            <div class="jobCard">
-                <div class="cardHeader">
-                    <img src="/images/lightning.svg" alt="Hidráulica">
-                    <h3>Efetuo reparos elétricos</h3>
-                </div>
-                <div class=cardContent>
-                    <div class="userInfo">
-                        <img src="/images/user.svg" alt="Nome de usuário">
-                        Luis Eduardo
-                    </div>
-                    <div class="jobDescription">
-                        <strong>Descrição:</strong>
-                        <span>Conserto problemas de fiação, mau contato e faço instalações elétricas.
-                        </span>
-                    </div>
-                    
-                    <a class="button" href="#">
-                        <img src="/images/whatsappLogo.svg" alt="Entrar em contato">
-                        Entrar em contato
-                    </a>
-                </div> 
-            </div>
-
-            <div class="jobCard">
-                <div class="cardHeader">
-                    <img src="/images/hammer.svg" alt="Hidráulica">
-                    <h3>Consertos em madeira</h3>
-                </div>
-                <div class=cardContent>
-                    <div class="userInfo">
-                        <img src="/images/user.svg" alt="Nome de usuário">
-                        Paulo de Tarso
-                    </div>
-                    <div class="jobDescription">
-                        <strong>Descrição:</strong>
-                        <span> Serviços de marcenaria em geral. Faço móveis por encomenda ou algum reparo em específico
-                        </span>
-                    </div>
-                    
-                    <a class="button" href="#">
-                        <img src="/images/whatsappLogo.svg" alt="Entrar em contato">
-                        Entrar em contato
-                    </a>
-                </div> 
-            </div>
-
-            <div class="jobCard">
-                <div class="cardHeader">
-                    <img src="/images/brush.svg" alt="Hidráulica">
-                    <h3>Pintura residencial</h3>
-                </div>
-                <div class=cardContent>
-                    <div class="userInfo">
-                        <img src="/images/user.svg" alt="Nome de usuário">
-                        Luis Eduardo
-                    </div>
-                    <div class="jobDescription">
-                        <strong>Descrição:</strong>
-                        <span>Pinto seu apartamento ou casa, interno ou externo.
-                            Caso interessado, o preço poderá ser combinado em mensagem.
-                        </span>
-                    </div>
-                    
-                    <a class="button" href="#">
-                        <img src="/images/whatsappLogo.svg" alt="Entrar em contato">
-                        Entrar em contato
-                    </a>
-                </div> 
-            </div>
+            <% }) %> 
 
 
         </div>

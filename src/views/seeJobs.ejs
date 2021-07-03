@@ -37,19 +37,42 @@
                 <h2>Ver meus jobs</h2>
     
                 <div class="loginForm">
-                    <form action="#">
+                    <form action="/myJobs" method="POST">
                         <div class="inputsContainer">
-                            <input type="number" placeholder="Código de login"/>
-                            <input type="password" placeholder="Senha"/>
+                            <input type="number" name="loginCode" placeholder="Código de login"/>
+                            <input type="password" name="password" placeholder="Senha"/>
                         </div>
+                        <button class="button">Ver jobs</button>
                     </form>
-                    <a href="#" class="button">Ver jobs</a>
                 </div>
             </div>
     
             <div class="cardsContainer">
 
-                <div class="jobCard">
+                <% userJobs.map(job => { %>
+                    <div class="jobCard">
+                        <div class="cardContent">
+                            <div class="cardHeader">
+                                <img src="/images/<%= job.area %>.svg" alt="" />
+                                <h3><%= job.title %></h3>
+                            </div>
+    
+                            <div class="jobDescription">
+                                <strong>Descrição:</strong>
+                                <span><%= job.description %></span>
+                            </div>
+                        </div>
+                        <div class="deleteBtnContainer">
+                            <form action="/deleteJob/<%=job.user_id%> /<%=job.id%> " method="POST">
+                                <button>
+                                    <img src="/images/trash.svg" alt="">
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                <% }) %>  
+
+                <!-- <div class="jobCard">
                     <div class="cardContent">
                         <div class="cardHeader">
                             <img src="/images/lightning.svg" alt="" />
@@ -89,7 +112,7 @@
                             </button>
                         </form>
                     </div>
-                </div>
+                </div> -->
 
 
             </div>

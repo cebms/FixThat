@@ -3,7 +3,19 @@ import {Request, Response} from 'express';
 import Database from '../database/config';
 
 class JobsController {
-    index(){}
+    async index(request:Request, response:Response){
+        const db = await Database();
+
+        const jobs = await db.all(`SELECT
+            jobs.title,
+            jobs.description,
+            jobs.area,
+            users.username,
+            users.whatsapp
+            FROM jobs LEFT JOIN users on jobs.user_id = users.id`);
+
+        response.render('home', {jobs});
+    }
 
 
     async create(request:Request, response:Response){
@@ -21,7 +33,7 @@ class JobsController {
         const userPassword = await db.get(`SELECT * FROM users WHERE id = ${user_id}`);
 
 
-        if(userPassword == undefined){
+        if(!userPassword){
             return response.render('error', {message: 'Usuário não encontrado'});
         } else {
             if(userPassword.password == password){
@@ -45,12 +57,17 @@ class JobsController {
                 return response.render('error', {message: 'Senha incorreta. Tente novamente'});
             }
         }
+              
+    }
 
+    async delete(request:Request, response:Response){
+        const db = await Database();
+        const {job_id, user_id} = request.params;
 
-            
+        await db.run(`DELETE FROM jobs WHERE id = ${job_id}`);
 
-
-                 
+        const userJobs = await db.all(`SELECT id, title, description, area FROM jobs WHERE user_id = ${user_id}`);
+        return response.render('seeJobs', {userJobs});
     }
 }
 
