@@ -32,6 +32,16 @@ Application to connect workers to clients who need home services
 * In the EJS files, delete some views that are alike and add its differences to a 'parts' folder,
   rendering these parts conditionally;
   
-  
+## Printscreens:
+
+![2021-07-06 12 41 41 localhost 185dd9b6cd46](https://user-images.githubusercontent.com/59201335/124630031-651fc000-de58-11eb-81ed-612ae06d813a.png)
+
+![2021-07-06 12 41 54 localhost 55131396994d](https://user-images.githubusercontent.com/59201335/124630042-681ab080-de58-11eb-935f-3de1ac78d9ad.png)
+
+![2021-07-06 12 42 57 localhost 2cad9673527d](https://user-images.githubusercontent.com/59201335/124630051-6a7d0a80-de58-11eb-9663-377c98ac1ebc.png)
+
+![2021-07-06 12 43 03 localhost 9ee9562e5968](https://user-images.githubusercontent.com/59201335/124630062-6c46ce00-de58-11eb-9011-118069f93438.png)
+
+![2021-07-06 12 43 24 localhost 59666644f456](https://user-images.githubusercontent.com/59201335/124630067-6e109180-de58-11eb-98c9-4124f159a857.png)
   
   
